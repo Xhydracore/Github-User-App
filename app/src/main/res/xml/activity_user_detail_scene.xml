@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="3000">
+       <KeyFrameSet>
+           <KeyPosition
+               motion:motionTarget="@+id/tvDetailName"
+               motion:framePosition="50"
+               motion:keyPositionType="pathRelative"
+               motion:percentX="0.5"
+               motion:percentY="0.5" />
+       </KeyFrameSet>
+        <OnSwipe motion:touchAnchorId="@+id/vpDetail" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/ivDetailUserProfile"
+            android:elevation="4dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="64dp" />
+        <Constraint
+            android:id="@+id/intentMainActivity"
+            android:elevation="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+        <Constraint
+            android:id="@+id/tvDetailName"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/ivDetailUserProfile"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:elevation="4dp" />
+        <Constraint
+            android:id="@+id/background_header"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toTopOf="@id/horizontalGuideline"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:layout_height="25dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/icLocation"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/tvDetailUserName"
+            motion:layout_constraintEnd_toStartOf="@+id/icCompany"
+            android:layout_marginTop="8dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            motion:layout_constraintEnd_toEndOf="@+id/tvDetailName"
+            android:layout_width="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/tvDetailName"
+            android:id="@+id/tvDetailUserName"
+            motion:layout_constraintStart_toStartOf="@+id/tvDetailName" />
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/icLocation"
+            android:id="@+id/tvDetailLocation"
+            motion:layout_constraintEnd_toEndOf="@+id/icLocation"
+            motion:layout_constraintStart_toStartOf="@+id/icLocation" />
+        <Constraint
+            android:id="@+id/icCompany"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/icLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/tvDetailUserName"
+            android:layout_marginTop="8dp" />
+        <Constraint
+            android:id="@+id/tlDetail"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/horizontalGuideline"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:elevation="4dp" />
+        <Constraint
+            android:id="@+id/vpDetail"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/tlDetail"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/tvDetailCompany"
+            motion:layout_constraintEnd_toEndOf="@+id/icCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/icCompany"
+            motion:layout_constraintStart_toStartOf="@+id/icCompany"
+            android:layout_marginTop="8dp" />
+        <Constraint
+            android:id="@+id/tvDetailRepo"
+            motion:layout_constraintEnd_toStartOf="@+id/tvDetailFollowers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/tvDetailLocation"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp" />
+        <Constraint
+            android:id="@+id/tvDetailFollowers"
+            motion:layout_constraintEnd_toStartOf="@+id/tvDetailFollowing"
+            motion:layout_constraintStart_toEndOf="@+id/tvDetailRepo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/tvDetailRepo"
+            motion:layout_constraintTop_toTopOf="@+id/tvDetailRepo" />
+        <Constraint
+            android:id="@+id/tvDetailFollowing"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/tvDetailFollowers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/tvDetailFollowers"
+            motion:layout_constraintTop_toTopOf="@+id/tvDetailFollowers" />
+        <Constraint
+            android:id="@+id/DetailRepo"
+            motion:layout_constraintEnd_toEndOf="@+id/tvDetailRepo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/tvDetailRepo"
+            motion:layout_constraintStart_toStartOf="@+id/tvDetailRepo" />
+        <Constraint
+            android:id="@+id/DetailFollowers"
+            motion:layout_constraintEnd_toEndOf="@+id/tvDetailFollowers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/tvDetailFollowers"
+            motion:layout_constraintStart_toStartOf="@+id/tvDetailFollowers" />
+        <Constraint
+            android:id="@+id/DetailFollowing"
+            motion:layout_constraintEnd_toEndOf="@+id/tvDetailFollowing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/tvDetailFollowing"
+            motion:layout_constraintStart_toStartOf="@+id/tvDetailFollowing" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/progressIndicator" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/progressIndicator2" />
+        <Constraint
+            motion:layout_constraintBottom_toBottomOf="@+id/background_header"
+            android:id="@+id/progressIndicator3" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/progressIndicator4" />
+        <Constraint
+            android:id="@+id/floatingActionButton"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="16dp"
+            motion:layout_editor_absoluteY="586dp"
+            motion:layout_constraintEnd_toEndOf="parent" />
+        <Constraint
+            android:id="@+id/floatingActionButton"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp" />
+        <Constraint
+            android:id="@+id/btnFavoriteUser"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp" />
+        <Constraint
+            android:id="@+id/DetailSpinner"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@id/horizontalGuideline"
+            android:visibility="gone"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:layout_height="50dp"
+            motion:layout_constraintHorizontal_bias="0.0"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="50dp"
+            android:id="@+id/ivDetailUserProfile"
+            motion:layout_constraintStart_toEndOf="@+id/intentMainActivity"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintTop_toTopOf="@+id/intentMainActivity"
+            motion:layout_constraintBottom_toBottomOf="@+id/intentMainActivity"
+            motion:layout_constraintVertical_bias="0.0" />
+        <Constraint
+            android:id="@+id/intentMainActivity"
+            android:elevation="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+        <Constraint
+            android:id="@+id/tvDetailUserName"
+            motion:layout_constraintEnd_toEndOf="@+id/tvDetailName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/tvDetailName"
+            motion:layout_constraintStart_toStartOf="@+id/tvDetailName"
+            android:layout_marginTop="4dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toTopOf="@+id/ivDetailUserProfile"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/tvDetailName"
+            motion:layout_constraintBottom_toBottomOf="@+id/ivDetailUserProfile"
+            motion:layout_constraintStart_toEndOf="@+id/ivDetailUserProfile"
+            motion:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"/>
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintGuide_begin="75dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/horizontalGuideline" />
+        <Constraint
+            android:id="@+id/icLocation"
+            motion:layout_constraintEnd_toStartOf="@+id/icCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            motion:layout_constraintTop_toBottomOf="@+id/tvDetailUserName"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/tvDetailLocation"
+            motion:layout_constraintEnd_toEndOf="@+id/icLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/icLocation"
+            motion:layout_constraintStart_toStartOf="@+id/icLocation"
+            android:layout_marginTop="8dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/icCompany"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/icLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/tvDetailUserName"
+            android:layout_marginTop="8dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/tvDetailCompany"
+            motion:layout_constraintEnd_toEndOf="@+id/icCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/icCompany"
+            motion:layout_constraintStart_toStartOf="@+id/icCompany"
+            android:layout_marginTop="8dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/tlDetail"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/horizontalGuideline"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/vpDetail"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/tlDetail"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/tvDetailRepo"
+            motion:layout_constraintEnd_toStartOf="@+id/tvDetailFollowers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/tvDetailLocation"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp"
+            android:visibility="gone" />
+        <Constraint
+            android:id="@+id/tvDetailFollowers"
+            motion:layout_constraintEnd_toStartOf="@+id/tvDetailFollowing"
+            motion:layout_constraintStart_toEndOf="@+id/tvDetailRepo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/tvDetailRepo"
+            motion:layout_constraintTop_toTopOf="@+id/tvDetailRepo"
+            android:visibility="gone" />
+        <Constraint
+            android:id="@+id/tvDetailFollowing"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/tvDetailFollowers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/tvDetailFollowers"
+            motion:layout_constraintTop_toTopOf="@+id/tvDetailFollowers"
+            android:visibility="gone" />
+        <Constraint
+            android:id="@+id/DetailRepo"
+            motion:layout_constraintEnd_toEndOf="@+id/tvDetailRepo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/tvDetailRepo"
+            motion:layout_constraintStart_toStartOf="@+id/tvDetailRepo"
+            android:visibility="gone" />
+        <Constraint
+            android:id="@+id/DetailFollowers"
+            motion:layout_constraintEnd_toEndOf="@+id/tvDetailFollowers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/tvDetailFollowers"
+            motion:layout_constraintStart_toStartOf="@+id/tvDetailFollowers"
+            android:visibility="gone" />
+        <Constraint
+            android:id="@+id/DetailFollowing"
+            motion:layout_constraintEnd_toEndOf="@+id/tvDetailFollowing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/tvDetailFollowing"
+            motion:layout_constraintStart_toStartOf="@+id/tvDetailFollowing"
+            android:visibility="gone" />
+        <Constraint
+            android:layout_height="50dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="50dp"
+            android:id="@+id/spinnerDetailUser"
+            motion:layout_constraintTop_toTopOf="@+id/intentMainActivity"
+            motion:layout_constraintBottom_toBottomOf="@+id/intentMainActivity"
+            motion:layout_constraintStart_toEndOf="@+id/intentMainActivity"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintHorizontal_bias="0.0" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@id/horizontalGuideline"
+            android:visibility="gone"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/DetailSpinner"
+            motion:layout_constraintVertical_bias="1.0" />
+        <Constraint
+            android:id="@+id/btnFavoriteUser"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp" />
+    </ConstraintSet>
+</MotionScene>

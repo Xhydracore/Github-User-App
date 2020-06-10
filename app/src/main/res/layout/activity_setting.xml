@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SettingActivity">
+    <ImageButton
+        android:id="@+id/intentMainActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/circle_background"
+        android:elevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_keyboard_arrow_left_black_24dp" />
+
+    <TextView
+        android:id="@+id/SettingAct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/setting"
+        style="@style/Headline1"
+        app:layout_constraintBottom_toBottomOf="@+id/intentMainActivity"
+        app:layout_constraintStart_toEndOf="@+id/intentMainActivity"
+        app:layout_constraintTop_toTopOf="@+id/intentMainActivity" />
+
+    <TextView
+        android:id="@+id/tvDailyReminder"
+        style="@style/Headline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/daily_reminder"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intentMainActivity" />
+
+    <Button
+        android:id="@+id/btnOffAlarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/off"
+        android:elevation="4dp"
+        android:backgroundTint="@color/Error"
+        app:layout_constraintBottom_toBottomOf="@+id/btnOnAlarm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btnOnAlarm"
+        app:layout_constraintTop_toTopOf="@+id/btnOnAlarm" />
+
+    <Button
+        android:id="@+id/btnOnAlarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="@string/on"
+        android:elevation="4dp"
+        android:backgroundTint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDailyReminder"
+        app:layout_constraintStart_toEndOf="@+id/tvDailyReminder"
+        app:layout_constraintTop_toTopOf="@+id/tvDailyReminder" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

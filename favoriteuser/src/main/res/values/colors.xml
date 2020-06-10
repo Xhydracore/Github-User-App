@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00897B</color>
+    <color name="colorPrimaryDark">#2C3E50</color>
+    <color name="colorAccent">#03DAC6</color>
+    <color name="SecondaryVariant">#018786</color>
+    <color name="Background">#FFFFFF</color>
+    <color name="Surface">#FFFFFF</color>
+    <color name="Error">#B00020</color>
+    <color name="OnPrimary">#FFFFFF</color>
+    <color name="OnSecondary">#000000</color>
+    <color name="OnBackground">#000000</color>
+    <color name="OnSurface">#000000</color>
+    <color name="OnError">#FFFFFF</color>
+    <color name="GradStart">#D2CCC4</color>
+    <color name="GradEnd">#2F4353</color>
+    <color name="Gray">#C0C0C0</color>
+
+
+</resources>

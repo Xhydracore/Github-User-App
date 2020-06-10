@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="3000">
+        <KeyFrameSet>
+            <KeyPosition
+                motion:motionTarget="@+id/ivGithubLogo"
+                motion:framePosition="50"
+                motion:keyPositionType="pathRelative"
+                motion:percentX="0.5"
+                motion:percentY="0.5" />
+        </KeyFrameSet>
+        <OnSwipe motion:touchAnchorId="@+id/rvGithubUser" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="@+id/ivGithubMark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/ivGithubMark"
+            motion:layout_constraintStart_toStartOf="@+id/ivGithubMark"
+            android:id="@+id/ivGithubLogo"
+            android:layout_marginTop="8dp" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="78dp"
+            android:layout_height="65dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:id="@+id/ivGithubMark"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp" />
+        <Constraint
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/recyclerView" />
+        <Constraint
+            motion:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/recyclerView2"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="155dp"
+            android:layout_height="290dp" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            motion:layout_constraintTop_toBottomOf="@+id/ivGithubLogo"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp"
+            android:id="@+id/rvGithubUser"
+            motion:layout_constraintBottom_toBottomOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:layout_height="65dp"
+            android:layout_marginTop="32dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_width="78dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="80dp"
+            android:id="@+id/ivGithubMark"
+            android:layout_marginLeft="80dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="139dp"
+            android:id="@+id/ivGithubLogo"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/ivGithubMark"
+            motion:layout_constraintTop_toTopOf="@+id/ivGithubMark"
+            motion:layout_constraintBottom_toBottomOf="@+id/ivGithubMark"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintHorizontal_bias="0.0" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            motion:layout_constraintTop_toBottomOf="@+id/ivGithubLogo"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:id="@+id/rvGithubUser"
+            motion:layout_constraintBottom_toBottomOf="parent" />
+    </ConstraintSet>
+</MotionScene>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/motion_home"
+    app:layoutDescription="@xml/motion_home_scene">
+
+        <ImageView
+            android:id="@+id/ivGithubMark"
+            android:layout_width="78dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="146dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="144dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_github_mark" />
+
+        <ImageView
+            android:id="@+id/ivGithubLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/ivGithubMark"
+            app:layout_constraintStart_toStartOf="@+id/ivGithubMark"
+            app:layout_constraintTop_toBottomOf="@+id/ivGithubMark"
+            app:srcCompat="@drawable/ic_github_logo" />
+</androidx.constraintlayout.motion.widget.MotionLayout>
