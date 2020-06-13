@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Github User App</string>
+    <string name="name">Namaku</string>
+    <string name="follow">999</string>
+    <string name="repo">Repository</string>
+    <string name="followers">Pengikut</string>
+    <string name="following">Mengikuti</string>
+    <string name="username">NamaPengguna</string>
+    <string name="my_location">Lokasiku</string>
+    <string name="my_company">Perusahaanku</string>
+    <string name="search_result">Hasil Pencarian :</string>
+    <string name="user_not_found">Pengguna tidak ditemukan!.</string>
+    <!-- Other string resources-->
+    <string name="query_hint">Cari Pengguna Github…</string>
+    <string name="favorite_user_github">Favorite User Github</string>
+    <string name="setting">Pengaturan</string>
+    <string name="daily_reminder">Pengingat Harian</string>
+    <string name="off">OFF</string>
+    <string name="on">ON</string>
+    <string name="settings">Pengaturan</string>
+    <string name="favorite">Favorit</string>
+    <string name="language_setting">Pengaturan Bahasa</string>
+
+</resources>

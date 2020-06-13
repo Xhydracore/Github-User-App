@@ -18,7 +18,6 @@
         app:srcCompat="@drawable/ic_keyboard_arrow_left_black_24dp" />
 
     <TextView
-        android:id="@+id/SettingAct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

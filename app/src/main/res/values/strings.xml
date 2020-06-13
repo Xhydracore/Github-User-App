@@ -8,26 +8,15 @@
     <string name="username">Xhydracore</string>
     <string name="my_location">My Location</string>
     <string name="my_company">My Company</string>
-    <string name="back">Back</string>
-    <string name="back_button">Back Button</string>
     <string name="search_result">Search Result :</string>
     <string name="user_not_found">User not found!.</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="change_language">Language Changed</string>
     <string name="query_hint">Search Github User…</string>
     <string name="favorite_user_github">Favorite User Github</string>
     <string name="setting">Setting</string>
     <string name="daily_reminder">Daily Reminder</string>
     <string name="off">OFF</string>
     <string name="on">ON</string>
-    <string name="myrepo">MyRepo</string>
-    <string name="lorem_ipsum">Lorem ipsum dorol sit amet, consectetur adipiscing elit.</string>
-    <string name="content_description_repo_language">content_description_repo_language</string>
-    <string name="java">Java</string>
-    <string name="content_description_repo_star">content_description_repo_star</string>
-    <string name="star_number">130</string>
-    <string name="fork_number">80</string>
     <string name="settings">Settings</string>
     <string name="favorite">Favorite</string>
     <string name="language_setting">Language Setting</string>

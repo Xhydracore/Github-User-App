@@ -7,7 +7,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object NetworkConfig {
-    fun getInterceptor() : OkHttpClient {
+    private fun getInterceptor() : OkHttpClient {
         val interceptor = HttpLoggingInterceptor()
         interceptor.level = HttpLoggingInterceptor.Level.BODY
 
@@ -16,7 +16,7 @@ object NetworkConfig {
             .build()
     }
 
-    fun getRetrofit() : Retrofit {
+    private fun getRetrofit() : Retrofit {
         return Retrofit.Builder()
             .baseUrl(ConstValue.BASE_URL)
             .client(getInterceptor())
@@ -24,5 +24,5 @@ object NetworkConfig {
             .build()
     }
 
-    fun service() = getRetrofit().create(GithubAPIService::class.java)
+    fun service(): GithubAPIService = getRetrofit().create(GithubAPIService::class.java)
 }

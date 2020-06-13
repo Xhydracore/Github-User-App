@@ -48,10 +48,10 @@ class GithubUsersProvider : ContentProvider() {
         val cursor: Cursor?
         Log.e("query", "$uri")
         Log.e("uriMatch", "${uriMatcher.match(uri)}")
-        when(uriMatcher.match(uri)){
-            GITHUB_USERS -> cursor = githubUsersHelper.queryAll()
-            USERNAME_GITHUB_USER -> cursor = githubUsersHelper.queryByUsername(uri.lastPathSegment.toString())
-            else -> cursor = null
+        cursor = when(uriMatcher.match(uri)){
+            GITHUB_USERS -> githubUsersHelper.queryAll()
+            USERNAME_GITHUB_USER -> githubUsersHelper.queryByUsername(uri.lastPathSegment.toString())
+            else -> null
         }
         return cursor
     }

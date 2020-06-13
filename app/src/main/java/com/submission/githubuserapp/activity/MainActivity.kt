@@ -1,11 +1,11 @@
 package com.submission.githubuserapp.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.submission.githubuserapp.R
@@ -26,8 +26,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(bottomAppBar)
         // load recyclerView Function
         loadItemUserRecycler()
-
-
+        // fab intent Search Activity
         btnintentSearchActivity.setOnClickListener {
             startActivity<SearchActivity>()
         }

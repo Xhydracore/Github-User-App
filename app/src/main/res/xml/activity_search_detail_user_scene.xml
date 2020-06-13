@@ -15,7 +15,7 @@
                 motion:percentX="0.5"
                 motion:percentY="0.5" />
         </KeyFrameSet>
-        <OnSwipe motion:touchAnchorId="@+id/tvSearchDetail" />
+        <OnSwipe motion:touchAnchorId="@+id/vpSearchDetail" />
     </Transition>
 
     <ConstraintSet android:id="@+id/start">

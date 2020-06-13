@@ -16,7 +16,7 @@ import com.submission.githubuserapp.model.User
 import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.item_user.view.*
 
-class ListUserAdapter (val context: Context, val listUser: ArrayList<User>) :
+class ListUserAdapter (val context: Context, private val listUser: ArrayList<User>) :
     RecyclerView.Adapter<ListUserAdapter.ListViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_user, parent, false)

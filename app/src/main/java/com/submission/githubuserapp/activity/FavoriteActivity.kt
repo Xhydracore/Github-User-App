@@ -7,6 +7,7 @@ import com.submission.githubuserapp.R
 import com.submission.githubuserapp.adapter.FavoriteUserAdapter
 import com.submission.githubuserapp.helper.FavoriteHelper
 import com.submission.githubuserapp.helper.MappingHelper
+import com.submission.githubuserapp.model.DefaultItemDecorator
 import kotlinx.android.synthetic.main.activity_favorite.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -34,6 +35,12 @@ class FavoriteActivity : AppCompatActivity() {
         // rv
         rvFavorite.layoutManager = LinearLayoutManager(this)
         rvFavorite.setHasFixedSize(true)
+        rvFavorite.addItemDecoration(
+            DefaultItemDecorator(
+                resources.getDimensionPixelSize(R.dimen.provider_name_horizontal_margin),
+                resources.getDimensionPixelSize(R.dimen.provide_name_vertical_margin)
+            )
+        )
         adapter = FavoriteUserAdapter(this)
         rvFavorite.adapter = adapter
 

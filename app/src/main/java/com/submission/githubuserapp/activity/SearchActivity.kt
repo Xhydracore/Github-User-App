@@ -13,7 +13,6 @@ import com.submission.githubuserapp.presenter.SearchUsernamePresenter
 import com.submission.githubuserapp.view.SearchUsernameView
 import kotlinx.android.synthetic.main.activity_favorite.intentMainActivity
 import kotlinx.android.synthetic.main.activity_search.*
-import kotlinx.android.synthetic.main.fragment_followers.*
 import org.jetbrains.anko.toast
 
 class SearchActivity : AppCompatActivity(), SearchUsernameView {
@@ -42,10 +41,10 @@ class SearchActivity : AppCompatActivity(), SearchUsernameView {
         svSearchResult.setQuery(getQuery, false)
         svSearchResult.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String): Boolean {
-                rvSearchResult.visibility = View.GONE
-                tvNullData.visibility = View.GONE
-                searchPresenter.getSearchResult(query)
-                return true
+                    rvSearchResult.visibility = View.GONE
+                    tvNullData.visibility = View.GONE
+                    searchPresenter.getSearchResult(query)
+                    return true
             }
 
             override fun onQueryTextChange(newText: String): Boolean {
@@ -90,6 +89,7 @@ class SearchActivity : AppCompatActivity(), SearchUsernameView {
             )
         )
         rvSearchResult.adapter = SearchUsernameAdapter(this, data)
+        rvSearchResult.setHasFixedSize(true)
     }
 
     override fun onErrorGetSearch(message: String) {

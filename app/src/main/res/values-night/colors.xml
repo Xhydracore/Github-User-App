@@ -4,13 +4,8 @@
     <color name="colorPrimaryDark">#202020</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="Background">#121212</color>
-    <color name="Surface">#121212</color>
     <color name="Error">#CF6679</color>
-    <color name="OnPrimary">#000000</color>
-    <color name="OnSecondary">#000000</color>
     <color name="OnBackground">#FFFFFF</color>
-    <color name="OnSurface">#FFFFFF</color>
-    <color name="OnError">#000000</color>
     <color name="GradStart">#414141</color>
     <color name="GradEnd">#000000</color>
     <color name="Gray">#D3D3D3</color>

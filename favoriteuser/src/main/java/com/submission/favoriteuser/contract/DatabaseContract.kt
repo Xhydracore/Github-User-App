@@ -9,7 +9,7 @@ object DatabaseContract {
 
     class FavoriteColumns: BaseColumns {
         companion object{
-            const val TABLE_NAME = "github_users"
+            private const val TABLE_NAME = "github_users"
             const val USERNAME = "username"
             const val AVATAR_URL = "avatar_url"
             const val USER_ID = "user_id"

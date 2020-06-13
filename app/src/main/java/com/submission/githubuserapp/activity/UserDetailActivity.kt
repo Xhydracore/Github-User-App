@@ -2,10 +2,10 @@ package com.submission.githubuserapp.activity
 
 import android.content.ContentValues
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.submission.githubuserapp.R
@@ -21,14 +21,6 @@ import com.submission.githubuserapp.model.User
 import com.submission.githubuserapp.presenter.DetailUsernamePresenter
 import com.submission.githubuserapp.view.DetailUsernameView
 import kotlinx.android.synthetic.main.activity_user_detail.*
-import kotlinx.android.synthetic.main.activity_user_detail.DetailFollowers
-import kotlinx.android.synthetic.main.activity_user_detail.DetailFollowing
-import kotlinx.android.synthetic.main.activity_user_detail.DetailRepo
-import kotlinx.android.synthetic.main.activity_user_detail.icCompany
-import kotlinx.android.synthetic.main.activity_user_detail.icLocation
-import org.jetbrains.anko.db.classParser
-import org.jetbrains.anko.db.parseList
-import org.jetbrains.anko.toast
 
 class UserDetailActivity : AppCompatActivity(), DetailUsernameView {
 
@@ -56,10 +48,6 @@ class UserDetailActivity : AppCompatActivity(), DetailUsernameView {
 
         // setup actionbar
         setupNavigation()
-
-        // check isFavorite
-        favoriteState(user?.username.toString())
-        setFavorite()
 
         // setup actionBar
         setupActionBar(user?.username.toString())
@@ -131,6 +119,10 @@ class UserDetailActivity : AppCompatActivity(), DetailUsernameView {
         tvDetailFollowers.text = response?.followers.toString()
         tvDetailFollowing.text = response?.following.toString()
 
+        //check state Favorite
+        isFavorite = isFavoriteUser(response?.id?.toLong())
+        setFavorite()
+
         btnFavoriteUser.setOnClickListener {
             if (isFavorite) {
                 removeFromFavorite(response?.login.toString())
@@ -146,12 +138,6 @@ class UserDetailActivity : AppCompatActivity(), DetailUsernameView {
 
     override fun onErrorGetDetailUsername(message: String) {
 
-    }
-
-    private fun favoriteState(userID: String) {
-        val check = favoriteHelper.queryByUsername(userID)
-        val result = check.parseList(classParser<Favorite>())
-        if (result.isNotEmpty()) isFavorite = true
     }
 
     private fun setFavorite() {
@@ -174,5 +160,17 @@ class UserDetailActivity : AppCompatActivity(), DetailUsernameView {
     private fun removeFromFavorite(userID: String) {
         val uri = Uri.parse("$GITHUB_USERS_URI/$userID")
         contentResolver.delete(uri, null, null)
+    }
+    private fun isFavoriteUser(userID: Long?): Boolean {
+        val uri = Uri.parse("$GITHUB_USERS_URI/$userID")
+        val cursor = contentResolver.query(uri, null, null, null, null)
+        Log.e("isFavoriteUser", "found:${cursor?.count} || cursor:${cursor}")
+        if (cursor != null && cursor.count != 0) {
+            val data = MappingHelper.mapCursorToObject(cursor)
+            Log.e("isFavoriteUser", "username:${data.login}")
+            cursor.close()
+            return true
+        }
+        return false
     }
 }

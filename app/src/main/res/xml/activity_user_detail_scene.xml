@@ -156,26 +156,20 @@
             motion:layout_constraintTop_toBottomOf="@+id/tvDetailFollowing"
             motion:layout_constraintStart_toStartOf="@+id/tvDetailFollowing" />
         <Constraint
-            motion:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/progressIndicator" />
+            motion:layout_constraintEnd_toEndOf="parent" />
         <Constraint
-            motion:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/progressIndicator2" />
+            motion:layout_constraintEnd_toEndOf="parent" />
         <Constraint
-            motion:layout_constraintBottom_toBottomOf="@+id/background_header"
-            android:id="@+id/progressIndicator3" />
+            motion:layout_constraintBottom_toBottomOf="@+id/background_header" />
         <Constraint
-            motion:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/progressIndicator4" />
+            motion:layout_constraintEnd_toEndOf="parent" />
         <Constraint
-            android:id="@+id/floatingActionButton"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_marginEnd="16dp"
             motion:layout_editor_absoluteY="586dp"
             motion:layout_constraintEnd_toEndOf="parent" />
         <Constraint
-            android:id="@+id/floatingActionButton"
             motion:layout_constraintEnd_toEndOf="parent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -354,7 +348,6 @@
             android:layout_height="50dp"
             motion:layout_constraintEnd_toEndOf="parent"
             android:layout_width="50dp"
-            android:id="@+id/spinnerDetailUser"
             motion:layout_constraintTop_toTopOf="@+id/intentMainActivity"
             motion:layout_constraintBottom_toBottomOf="@+id/intentMainActivity"
             motion:layout_constraintStart_toEndOf="@+id/intentMainActivity"
