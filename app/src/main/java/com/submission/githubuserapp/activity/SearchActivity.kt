@@ -29,16 +29,10 @@ class SearchActivity : AppCompatActivity(), SearchUsernameView {
         intentMainActivity.setOnClickListener {
             finish()
         }
-
-        // setquery searchView
-        val getQuery = intent.getStringExtra("query")
-
         // declare presenter
         searchPresenter = SearchUsernamePresenter(this)
-        searchPresenter.getSearchResult(getQuery)
 
         // text search result
-        svSearchResult.setQuery(getQuery, false)
         svSearchResult.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String): Boolean {
                     rvSearchResult.visibility = View.GONE

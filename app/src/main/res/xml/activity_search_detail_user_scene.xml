@@ -194,7 +194,7 @@
             motion:layout_constraintTop_toBottomOf="@+id/tvDetailSearchName"
             motion:layout_constraintStart_toStartOf="@+id/tvDetailSearchName"
             android:layout_marginTop="4dp"
-            android:visibility="invisible" />
+            android:visibility="gone" />
         <Constraint
             android:id="@+id/icLocation"
             motion:layout_constraintEnd_toStartOf="@+id/icCompany"
@@ -203,7 +203,7 @@
             motion:layout_constraintTop_toBottomOf="@+id/tvDetailSearchUserName"
             motion:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="8dp"
-            android:visibility="invisible" />
+            android:visibility="gone" />
         <Constraint
             android:id="@+id/icCompany"
             motion:layout_constraintEnd_toEndOf="parent"
@@ -212,7 +212,7 @@
             android:layout_height="wrap_content"
             motion:layout_constraintTop_toBottomOf="@+id/tvDetailSearchUserName"
             android:layout_marginTop="8dp"
-            android:visibility="invisible" />
+            android:visibility="gone" />
         <Constraint
             android:id="@+id/tvDetailSearchLocation"
             motion:layout_constraintEnd_toEndOf="@+id/icLocation"
@@ -221,7 +221,7 @@
             motion:layout_constraintTop_toBottomOf="@+id/icLocation"
             motion:layout_constraintStart_toStartOf="@+id/icLocation"
             android:layout_marginTop="8dp"
-            android:visibility="invisible" />
+            android:visibility="gone" />
         <Constraint
             android:id="@+id/tvDetailSearchCompany"
             motion:layout_constraintEnd_toEndOf="@+id/icCompany"
@@ -230,12 +230,12 @@
             motion:layout_constraintTop_toBottomOf="@+id/icCompany"
             motion:layout_constraintStart_toStartOf="@+id/icCompany"
             android:layout_marginTop="8dp"
-            android:visibility="invisible" />
+            android:visibility="gone" />
         <Constraint
             android:id="@+id/horizontalGuideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            motion:layout_constraintGuide_end="582dp" />
+            motion:layout_constraintGuide_end="574dp" />
         <Constraint
             android:id="@+id/DetailFollowing"
             motion:layout_constraintEnd_toEndOf="@+id/tvDetailSearchFollowing"

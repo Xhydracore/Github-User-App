@@ -12,6 +12,7 @@ import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import com.submission.githubuserapp.R
+import com.submission.githubuserapp.activity.MainActivity
 import org.jetbrains.anko.toast
 import java.util.*
 
@@ -31,7 +32,6 @@ class AlarmReceiver : BroadcastReceiver() {
 
         val type = intent.getStringExtra(EXTRA_TYPE)
         val message = intent.getStringExtra(EXTRA_MESSAGE)
-
         val title = if (type.equals(TYPE_ONE_TIME, ignoreCase = true)) TYPE_ONE_TIME else TYPE_REPEATING
         val notifId = if (type.equals(TYPE_ONE_TIME, ignoreCase = true)) ID_ONE_TIME else ID_REPEATING
 
@@ -78,6 +78,7 @@ class AlarmReceiver : BroadcastReceiver() {
             .setSmallIcon(R.drawable.ic_access_time_black_24dp)
             .setContentTitle(title)
             .setContentText(message)
+            .setContentIntent(PendingIntent.getActivity(context, 0, Intent(context, MainActivity::class.java), 0))
             .setColor(ContextCompat.getColor(context, android.R.color.transparent))
             .setVibrate(longArrayOf(1000, 1000, 1000, 1000, 1000))
             .setSound(alarmSound)
